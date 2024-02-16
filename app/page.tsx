@@ -6,6 +6,7 @@ import HomeCoverSection from '@/components/Home/HomeCoverSection'
 import blog from '@/sanity/schemas/post'
 import getData from '@/sanity/getData'
 import RecentPost from '@/components/Home/RecentPost'
+import Cualaquiera from '@/components/Home/Cualaquiera'
 
 export default async function Home() {
   const data = await getData()
@@ -15,6 +16,7 @@ export default async function Home() {
       <HomeCoverSection />
       <FeaturedPost />
       <RecentPost />
+      <Cualaquiera />
     </main>
   )
 }
