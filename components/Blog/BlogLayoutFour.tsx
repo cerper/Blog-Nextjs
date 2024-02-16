@@ -8,10 +8,10 @@ const BlogLayoutFour = async () => {
   const blog = await getData()
   return (
     <div className="grid grid-cols-3 grid-rows-1 mt-16 gap-10">
-      {blog.slice(4, 7).map((blog: Blog) => {
+      {blog.slice(4, 7).map((blog: Blog, index) => {
         return (
           <div
-            key={blog._id}
+            key={index}
             className="group flex flex-col items-center justify-center  text-dark"
           >
             <article className="col-span-1 row-span-1 relative">
