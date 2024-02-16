@@ -43,8 +43,8 @@ const BlogLayoutFour = async () => {
                 <span className="uppercase text-accent font-semibold text-sm">
                   {blog?.tags?.map((tag: any) => (
                     <div
-                      className="text-gray capitalize font-semibold text-base "
                       key={tag._id}
+                      className="text-gray capitalize font-semibold text-base "
                     >
                       {tag.name}
                     </div>
