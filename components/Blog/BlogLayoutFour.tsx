@@ -8,10 +8,13 @@ const BlogLayoutFour = async () => {
   const blog = await getData()
   return (
     <div className="grid grid-cols-3 grid-rows-1 mt-16 gap-10">
-      {blog.slice(4, 7).map((blog: Blog, _id: number) => {
+      {blog.slice(4, 7).map((blog: Blog) => {
         return (
-          <div className="group flex flex-col items-center justify-center  text-dark">
-            <article className="col-span-1 row-span-1 relative" key={blog._id}>
+          <div
+            key={blog._id}
+            className="group flex flex-col items-center justify-center  text-dark"
+          >
+            <article className="col-span-1 row-span-1 relative">
               <Link
                 href={`blogs/${blog.slug}`}
                 className=" h-full rounded-xl overflow-hidden"
@@ -42,12 +45,12 @@ const BlogLayoutFour = async () => {
                 </Link>
                 <span className="uppercase text-accent font-semibold text-sm">
                   {blog?.tags?.map((tag: any) => (
-                    <div
-                      key={tag._id}
+                    <span
+                      key={tag?._id}
                       className="text-gray capitalize font-semibold text-base "
                     >
                       {tag.name}
-                    </div>
+                    </span>
                   ))}
                 </span>
               </div>

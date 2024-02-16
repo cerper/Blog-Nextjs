@@ -21,18 +21,18 @@ const HomeCoverSection = async () => {
           className="w-full h-full object-cover object-center rounded-3xl -z-10"
         />
         <div className="w-3/4 p-16 flex flex-col items-start justify-center z-0 text-light">
-          <div>
+          <span>
             {blog?.tags?.map((tag: any) => (
               <Link href={`categories/all`}>
-                <div
-                  key={tag._id}
+                <span
+                  key={tag?._id}
                   className="inline-block py-3 px-10 bg-dark/95 text-light rounded-full ml-4 mb-8 capitalize font-semibold border-2 border-solid border-light hover:scale-90 transition-all duration-200 "
                 >
                   {tag.name}
-                </div>
+                </span>
               </Link>
             ))}
-          </div>
+          </span>
           <Link href={`blogs/${blog.slug}`} key={blog._id}>
             <h1 className="font-bold capitalize text-light text-4xl">
               <span

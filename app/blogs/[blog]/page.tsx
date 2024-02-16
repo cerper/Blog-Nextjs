@@ -28,7 +28,6 @@ export default async function Blog({ params }: Props) {
       </div>
       <div className="max-w-3xl text-center mt-12 text-xl mx-auto ">
         <PortableText value={blog.content} />
-        <div>hola</div>
       </div>
     </div>
   )

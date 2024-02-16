@@ -16,7 +16,6 @@ export default async function Home() {
       <HomeCoverSection />
       <FeaturedPost />
       <RecentPost />
-      <Cualaquiera />
     </main>
   )
 }

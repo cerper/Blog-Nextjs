@@ -36,12 +36,12 @@ const BlogLayoutThree = async () => {
         </Link>
         <span className="text-gray capitalize font-semibold text-base">
           {blog?.tags?.map((tag: any) => (
-            <div
+            <span
               key={tag._id}
               className="text-gray capitalize font-semibold text-base "
             >
               {tag.name}
-            </div>
+            </span>
           ))}
         </span>
       </div>
