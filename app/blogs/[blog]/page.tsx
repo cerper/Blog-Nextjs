@@ -18,7 +18,10 @@ export default async function Blog({ params }: Props) {
       >
         <span className="m-3">10views</span>
         {blog?.tags?.map((tag: any) => (
-          <div className="text-light capitalize font-semibold text-base ">
+          <div
+            key={tag._id}
+            className="text-light capitalize font-semibold text-base "
+          >
             {tag.name}
           </div>
         ))}

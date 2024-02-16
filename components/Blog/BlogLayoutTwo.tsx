@@ -35,10 +35,10 @@ const BlogLayoutTwo = async () => {
           </h1>
         </Link>
         <span className="text-gray capitalize font-semibold text-base">
-          {blog?.tags?.map((tag: any, _id: number) => (
+          {blog?.tags?.map((tag: any) => (
             <div
               className="text-gray capitalize font-semibold text-base "
-              key={blog._id}
+              key={tag._id}
             >
               {tag.name}
             </div>
