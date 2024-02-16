@@ -5,7 +5,7 @@ import BlogLayoutFour from '../Blog/BlogLayoutFour'
 
 const RecentPost = async () => {
   const data = await getData()
-
+  const blog = data
   console.log(data)
 
   return (
