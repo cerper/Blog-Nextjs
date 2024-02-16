@@ -43,6 +43,7 @@ const BlogLayoutThree = async () => {
               {tag.name}
             </div>
           ))}
+          <div>hola</div>
         </span>
       </div>
     </div>
