@@ -68,5 +68,6 @@ const blog = {
     },
   ],
 }
-export const dynamic = 'force-dynamic'
+
 export default blog
+export const dynamic = 'force-dynamic'

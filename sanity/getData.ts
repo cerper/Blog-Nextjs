@@ -1,22 +1,49 @@
+import {createClient} from '@sanity/client'
 import {client} from '../app/lib/sanity'
+import clientConfig from '../config/config'
+import {groq} from 'next-sanity'
+import {Blog} from '../type/blog'
 
-export default async function getData() {
-  const sanity = `*[_type == 'blog'] | order(_createdAt asc) {
-    _id,
-    _createdAt,
-    name,
-    description,
-    'slug':slug.current,
-    'image':image.asset->url,
-    content,
-    tags[]->{
+export default async function getData(): Promise<Blog[]> {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == 'blog']| order(_createdAt desc) {
+  _id,
+            _createdAt,
+            name,
+            'slug':slug.current,
+            'image':image.asset->url,
+              content,
+              description,
+
+              tags[]->{
       _id,
       slug,
-      name,
+      name
     }
-}`
-  const data = await client.fetch(sanity)
-  return data
+}`,
+  )
 }
 
+export async function getSlug(slug: string): Promise<Blog> {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == 'blog' && slug.current == $slug][0] {
+  _id,
+            _createdAt,
+            name,
+            'slug':slug.current,
+            'image':image.asset->url,
+              content,
+              description,
+
+              tags[]->{
+      _id,
+      slug,
+      name
+    }
+}`,
+    {slug},
+  )
+}
+
+export const revalidate = 10
 export const dynamic = 'force-dynamic'

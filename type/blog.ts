@@ -8,5 +8,7 @@ export type Blog = {
   image: string
   url: string
   content: PortableTextBlock[]
-  tags: string
+  tags: []
+  description: string
+  alt: string
 }

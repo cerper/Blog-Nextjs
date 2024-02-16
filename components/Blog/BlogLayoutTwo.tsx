@@ -11,17 +11,19 @@ const BlogLayoutTwo = async () => {
         href={`blogs/${blog.slug}`}
         className=" col-span-4  h-full rounded-xl overflow-hidden"
       >
+        {' '}
         <div>
           <Image
             src={blog.image}
             alt={blog.alt}
-            width={300}
-            height={200}
+            width={400}
+            height={300}
             className="aspect-square w-full h-full object-cover object-center  group-hover:scale-105 transition-all ease-in duration-200 "
           />
         </div>
       </Link>
-      <div className="col-span-7 w-full mx-2">
+
+      <div className="col-span-8 w-full mx-2">
         <Link href={`blogs/${blog.slug}`} className="inline-block my-1 ">
           <h1 className="font-semibold capitalize text-lg">
             <span
@@ -32,6 +34,16 @@ const BlogLayoutTwo = async () => {
             </span>
           </h1>
         </Link>
+        <span className="text-gray capitalize font-semibold text-base">
+          {blog?.tags?.map((tag: any, _id: number) => (
+            <div
+              className="text-gray capitalize font-semibold text-base "
+              key={blog._id}
+            >
+              {tag.name}
+            </div>
+          ))}
+        </span>
       </div>
     </div>
   )

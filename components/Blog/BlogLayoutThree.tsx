@@ -1,11 +1,12 @@
 import getData from '@/sanity/getData'
 import Image from 'next/image'
 import Link from 'next/link'
+import { format } from 'date-fns'
 
 const BlogLayoutThree = async () => {
   const data = await getData()
   const blog = data[3]
-  console.log(blog)
+
   return (
     <div className="group grid grid-cols-12 items-center text-dark">
       <Link
@@ -16,8 +17,8 @@ const BlogLayoutThree = async () => {
           <Image
             src={blog.image}
             alt={blog.alt}
-            width={300}
-            height={200}
+            width={400}
+            height={300}
             className="aspect-square w-full h-full object-cover object-center  group-hover:scale-105 transition-all ease-in duration-200 "
           />
         </div>
@@ -33,6 +34,13 @@ const BlogLayoutThree = async () => {
             </span>
           </h1>
         </Link>
+        <span className="text-gray capitalize font-semibold text-base">
+          {blog?.tags?.map((tag: any) => (
+            <div className="text-gray capitalize font-semibold text-base ">
+              {tag.name}
+            </div>
+          ))}
+        </span>
       </div>
     </div>
   )
