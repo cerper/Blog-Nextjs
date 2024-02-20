@@ -13,7 +13,7 @@ export default async function Blog({ params }: Props) {
   const slug = params.blog
   const blog = await getSlug(slug)
   return (
-    <div className="mb-8 text-center relative w-auto h-[60vh]">
+    <div className="mb-8 text-center relative w-auto h-auto">
       <h1 className="text-dark text-4xl font-bold underline mb-10 ">
         {blog.name}
       </h1>
@@ -22,7 +22,7 @@ export default async function Blog({ params }: Props) {
       </div>
       <div className="grid grid-cols-12 gap-16 mt-8 px-10 ">
         <div className="col-span-4">cotent table</div>
-        <div className="col-span-8 overflow-hidden">
+        <div className="col-span-8">
           <BlogContent params={params} />
         </div>
       </div>

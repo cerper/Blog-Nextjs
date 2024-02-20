@@ -12,8 +12,8 @@ const Footer = () => {
   const onSubmit = (data: any) => console.log(data)
   console.log(errors)
   return (
-    <footer className="mt-36  rounded-2xl bg-dark m-10 text-light flex flex-col items-center justify-center">
-      <h3 className="font-medium mt-16 text-2xl capitalize text-center ">
+    <footer className="mt-20 overflow-auto  rounded-2xl bg-dark m-4 text-light flex flex-col items-center justify-center">
+      <h3 className="font-medium mt-10 text-2xl capitalize text-center ">
         Interesting Stories | Updates | Guides
       </h3>
 

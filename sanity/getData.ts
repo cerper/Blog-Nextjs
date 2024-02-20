@@ -6,9 +6,10 @@ import {Blog} from '../type/blog'
 
 export default async function getData(): Promise<Blog[]> {
   return createClient(clientConfig).fetch(
-    groq`*[_type == 'blog']| order(_createdAt asc) {
+    groq`*[_type == 'blog']| order(publishedAt asc) {
             _id,
             _createdAt,
+            publishedAt,
             name,
             'slug':slug.current,
             'image':image.asset->url,
@@ -29,6 +30,7 @@ export async function getSlug(slug: string): Promise<Blog> {
     groq`*[_type == 'blog' && slug.current == $slug][0] {
   _id,
             _createdAt,
+            publishedAt,
             name,
             'slug':slug.current,
             'image':image.asset->url,
