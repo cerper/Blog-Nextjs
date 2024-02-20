@@ -1,7 +1,6 @@
 import getData from '@/sanity/getData'
 import Image from 'next/image'
 import Link from 'next/link'
-import { format } from 'date-fns'
 
 const BlogLayoutThree = async () => {
   const data = await getData()

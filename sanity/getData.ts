@@ -6,7 +6,7 @@ import {Blog} from '../type/blog'
 
 export default async function getData(): Promise<Blog[]> {
   return createClient(clientConfig).fetch(
-    groq`*[_type == 'blog']| order(_createdAt desc) {
+    groq`*[_type == 'blog']| order(_createdAt asc) {
             _id,
             _createdAt,
             name,

@@ -5,25 +5,24 @@ import Link from 'next/link'
 const HomeCoverSection = async () => {
   const data = await getData()
   const blog = data[0]
-  console.log(blog)
 
   return (
     <div className=" w-full inline-block">
       <article className="flex flex-col items-start justify-end mx-10 relative h-[70vh] mb-4">
         <div
           className="absolute top-0 left-0 right-0 bottom-0 h-full
-       bg-gradient-to-b from-transparent from-0% to-dark rounded-3xl z-0"
+       bg-gradient-to-b from-transparent from-0% to-dark rounded-3xl z-10"
         />
         <Image
           src={blog.image}
           alt={blog.alt}
           fill
-          className="w-full h-full object-cover object-center rounded-3xl -z-10"
+          className="w-full h-full object-cover object-center rounded-3xl z-0"
         />
-        <div className="w-3/4 p-16 flex flex-col items-start justify-center z-0 text-light">
+        <div className="w-3/4 p-16 flex flex-col items-start justify-center z-10 text-light">
           <span>
             {blog?.tags?.map((tag: any) => (
-              <Link href={`categories/all`} key={tag?._id}>
+              <Link href={`categories/all`} key={tag._id}>
                 <span className="inline-block py-3 px-10 bg-dark/95 text-light rounded-full ml-4 mb-8 capitalize font-semibold border-2 border-solid border-light hover:scale-90 transition-all duration-200 ">
                   {tag.name}
                 </span>
@@ -48,4 +47,5 @@ const HomeCoverSection = async () => {
     </div>
   )
 }
+export const dynamic = 'force-dynamic'
 export default HomeCoverSection

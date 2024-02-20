@@ -9,7 +9,7 @@ const BlogLayoutOne = async () => {
     <div className="group inline-block overflow-hidden rounded-2xl h-full w-full">
       <div
         className="absolute top-0 left-0 right-0 bottom-0 h-full
-       bg-gradient-to-b from-transparent from-0% to-dark rounded-3xl z-0"
+       bg-gradient-to-b from-transparent from-0% to-dark rounded-3xl "
       />
       <Link href={`blogs/${blog.slug}`}>
         <Image

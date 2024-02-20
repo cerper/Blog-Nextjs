@@ -6,9 +6,10 @@ import Link from 'next/link'
 
 const BlogLayoutFour = async () => {
   const blog = await getData()
+  console.log(blog)
   return (
     <div className="grid grid-cols-3 grid-rows-1 mt-16 gap-10">
-      {blog.slice(4, 7).map((blog: Blog, index) => {
+      {blog.slice(4, 8).map((blog: Blog, index) => {
         return (
           <div
             key={index}
@@ -47,7 +48,7 @@ const BlogLayoutFour = async () => {
                   {blog?.tags?.map((tag: any) => (
                     <span
                       key={tag?._id}
-                      className="text-gray capitalize font-semibold text-base "
+                      className="text-gray capitalize font-semibold text-base gap-2 "
                     >
                       {tag.name}
                     </span>
