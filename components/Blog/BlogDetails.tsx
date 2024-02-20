@@ -11,7 +11,9 @@ const BlogDetails = async ({ params }: Props) => {
     mx-10 rounded-lg"
     >
       <span className="m-3">10views</span>
-      <span>{new Date(blog?.publishedAt).toDateString()}</span>
+      <span className="gap-8 p-2">
+        {new Date(blog?.publishedAt).toDateString()}
+      </span>
       {blog?.tags?.map((tag: any) => (
         <div
           key={tag._id}

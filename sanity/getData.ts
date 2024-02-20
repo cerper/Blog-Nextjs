@@ -13,7 +13,7 @@ export default async function getData(): Promise<Blog[]> {
             name,
             'slug':slug.current,
             'image':image.asset->url,
-              content,
+             
               description,
 
               tags[]->{
