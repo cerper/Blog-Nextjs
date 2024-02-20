@@ -33,7 +33,7 @@ const BlogLayoutThree = async () => {
             </span>
           </h1>
         </Link>
-        <span className="text-gray capitalize font-semibold text-base">
+        <span className="text-gray flex flex-col capitalize font-semibold text-base">
           {blog?.tags?.map((tag: any) => (
             <span
               key={tag._id}
@@ -42,6 +42,7 @@ const BlogLayoutThree = async () => {
               {tag.name}
             </span>
           ))}
+          {new Date(blog?.publishedAt).toDateString()}
         </span>
       </div>
     </div>

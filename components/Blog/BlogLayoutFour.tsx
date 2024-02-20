@@ -8,12 +8,15 @@ const BlogLayoutFour = async () => {
   const blog = await getData()
   console.log(blog)
   return (
-    <div className="grid grid-cols-3 grid-rows-1 mt-16 gap-10">
-      {blog.slice(4, 8).map((blog: Blog, index) => {
+    <div
+      className="grid grid-cols-2 grid-rows-1 
+      mt-16 gap-10"
+    >
+      {blog.slice(4, 10).map((blog: Blog, index) => {
         return (
           <div
             key={index}
-            className="group flex flex-col items-center justify-center  text-dark"
+            className="group flex  items-center justify-center  text-dark"
           >
             <article className="col-span-1 row-span-1 relative">
               <Link
@@ -25,8 +28,8 @@ const BlogLayoutFour = async () => {
                     src={blog.image}
                     alt={blog.alt}
                     width={500}
-                    height={300}
-                    className="aspect-[4/3] w-full h-full object-cover object-center group-hover:scale-105 transition-all ease-in duration-300 "
+                    height={400}
+                    className="aspect-[4/3] w-full h-auto object-cover object-center group-hover:scale-105 transition-all ease-in duration-300 "
                   />
                 </div>
               </Link>
