@@ -1,9 +1,6 @@
 import BlogContent from '@/components/Blog/BlogContent'
 import BlogDetails from '@/components/Blog/BlogDetails'
 import { getSlug } from '@/sanity/getData'
-import { PortableText } from '@portabletext/react'
-import Image from 'next/image'
-import Link from 'next/link'
 
 type Props = {
   params: { blog: string }

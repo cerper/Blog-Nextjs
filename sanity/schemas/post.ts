@@ -49,6 +49,7 @@ const blog = {
       of: [
         {
           type: 'block',
+          title: 'Block',
         },
         {
           type: 'image',
