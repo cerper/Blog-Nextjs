@@ -49,28 +49,6 @@ const blog = {
       of: [
         {
           type: 'block',
-          title: 'Block',
-
-          marks: {
-            annotations: [
-              {
-                name: 'internalLink',
-                type: 'object',
-                title: 'Internal link',
-                fields: [
-                  {
-                    name: 'reference',
-                    type: 'reference',
-                    title: 'Reference',
-                    to: [
-                      {type: 'blog'},
-                      // other types you may want to link to
-                    ],
-                  },
-                ],
-              },
-            ],
-          },
         },
         {
           type: 'image',
