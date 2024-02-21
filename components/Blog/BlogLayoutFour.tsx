@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 const BlogLayoutFour = async () => {
   const blog = await getData()
-  console.log(blog)
+
   return (
     <div
       className="grid grid-cols-2 grid-rows-1 
@@ -29,7 +29,7 @@ const BlogLayoutFour = async () => {
                     alt={blog.alt}
                     width={500}
                     height={400}
-                    className="aspect-[4/3] w-full h-auto object-cover object-center group-hover:scale-105 transition-all ease-in duration-300 "
+                    className="aspect-[4/3] w-full rounded-2xl h-auto object-cover object-center group-hover:scale-105 transition-all ease-in duration-300 "
                   />
                 </div>
               </Link>

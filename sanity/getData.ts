@@ -35,6 +35,7 @@ export async function getSlug(slug: string): Promise<Blog> {
             'slug':slug.current,
             'image':image.asset->url,
               content,
+              
               description,
 
               tags[]->{
@@ -44,6 +45,18 @@ export async function getSlug(slug: string): Promise<Blog> {
     }
 }`,
     {slug},
+  )
+}
+
+export async function getTag() {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == 'tag']{
+        
+      _id,
+      slug,
+      name
+    }
+}`,
   )
 }
 
