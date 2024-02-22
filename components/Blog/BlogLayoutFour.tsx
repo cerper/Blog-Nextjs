@@ -9,7 +9,7 @@ const BlogLayoutFour = async () => {
 
   return (
     <div
-      className="grid grid-cols-2 grid-rows-1 
+      className="grid grid-cols-3 grid-rows-1 
       mt-16 gap-10"
     >
       {blog.slice(4, 10).map((blog: Blog, index) => {
@@ -29,7 +29,7 @@ const BlogLayoutFour = async () => {
                     alt={blog.alt}
                     width={500}
                     height={400}
-                    className="aspect-[4/3] w-full rounded-2xl h-auto object-cover object-center group-hover:scale-105 transition-all ease-in duration-300 "
+                    className="aspect-[5/3] w-full rounded-2xl h-auto object-cover object-center group-hover:scale-105 transition-all ease-in duration-300 "
                   />
                 </div>
               </Link>
@@ -38,7 +38,7 @@ const BlogLayoutFour = async () => {
                   href={`blogs/${blog.slug}`}
                   className="inline-block my-1 "
                 >
-                  <h1 className="font-semibold capitalize text-lg">
+                  <h1 className="font-semibold capitalize text-baseline">
                     <span
                       className="bg-gradient-to-r from-accent/50 to-accent/50 bg-[length:0px_6px]
               group-hover:bg-[length:100%_6px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500"

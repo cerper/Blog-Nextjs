@@ -14,10 +14,10 @@ export default async function Blog({ params }: Props) {
       <h1 className="text-dark text-4xl font-bold underline mb-10 ">
         {blog.name}
       </h1>
-      <div className="mx-10">
+      <div className="mx-10 sm:grid grid-col-1">
         <BlogDetails params={params} />
       </div>
-      <div className="grid grid-cols-6 gap-16 mt-8 text-justify px-10 ml-10 ">
+      <div className="grid grid-cols-6 gap-16 mt-8 text-justify px-10 mx-10 ">
         <div className="col-span-6">
           <BlogContent params={params} />
         </div>

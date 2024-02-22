@@ -1,25 +1,28 @@
 import Link from 'next/link'
 import { GithubIcon, LinkedinIcon, SunIcon, TiktokIcon } from '../icon'
 import Logo from './Logo'
-const Header = () => {
+import { getPage } from '@/sanity/getData'
+
+const Header = async () => {
+  const pages = await getPage()
+
   return (
-    <div className="w-full flex p-4 px-10 items-center justify-between  ">
+    <div className="w-full flex p-4 px-10 items-center justify-between  bg-light  ">
       <header className="w-full p-4 px-10 flex  items-center justify-between ">
         <Logo />
         <nav
-          className="w-auto py-3  px-8 border border-solid border-dark rounded-full font-medium capitalize flex items-center 
+          className="w-auto py-3  px-8 border border-solid border-dark rounded-full font-semibold capitalize flex items-center 
       fixed top-6 right-1/2 translate-x-1/2 bg-light/80 backdrop-blur-sm z-30"
         >
-          <Link href="/" className="mr-2 ">
+          <Link href={'/'} className="ml-4 text-dark ">
             Home
           </Link>
-          <Link href="/about" className="mx-2 ">
-            About
-          </Link>
-          <Link href="/contact" className="mx-2">
-            Contact
-          </Link>
-          <button>
+          {pages.map((page) => (
+            <Link key={page._id} href={`/${page.slug}`}>
+              <div className="ml-4 text-dark ">{page.name}</div>
+            </Link>
+          ))}
+          <button className="ml-2">
             <SunIcon />
           </button>
         </nav>

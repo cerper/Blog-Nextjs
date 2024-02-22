@@ -3,6 +3,7 @@ import {client} from '../app/lib/sanity'
 import clientConfig from '../config/config'
 import {groq} from 'next-sanity'
 import {Blog} from '../type/blog'
+import {Page} from '../type/page'
 
 export default async function getData(): Promise<Blog[]> {
   return createClient(clientConfig).fetch(
@@ -48,17 +49,26 @@ export async function getSlug(slug: string): Promise<Blog> {
   )
 }
 
-export async function getTag() {
+export async function getPage(): Promise<Page[]> {
   return createClient(clientConfig).fetch(
-    groq`*[_type == 'tag']{
-        
+    groq`*[_type == 'page']{
       _id,
-      slug,
-      name
-    }
-}`,
+      name,
+      'slug':slug.current,
+    }`,
   )
 }
 
+export async function getPages(slug: string): Promise<Page> {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == 'page'  && slug.current == $slug][0]{
+      _id,
+      name,
+      'slug':slug.current,
+      content
+    }`,
+    {slug},
+  )
+}
 export const revalidate = 10
 export const dynamic = 'force-dynamic'

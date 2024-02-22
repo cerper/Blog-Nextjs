@@ -17,7 +17,7 @@ const BlogDetails = async ({ params }: Props) => {
       {blog?.tags?.map((tag: any) => (
         <div
           key={tag._id}
-          className="text-light capitalize font-semibold text-base "
+          className="text-light flex flex-col capitalize font-semibold text-base "
         >
           #{tag.name}
         </div>
