@@ -8,6 +8,7 @@ const page = async ({ params }: Props) => {
   const slug = params.slug
   const page = await getPages(slug)
   console.log(page)
+
   return (
     <div>
       <div
@@ -15,7 +16,6 @@ const page = async ({ params }: Props) => {
     prose-leading-7 prose-li:list-disc flex flex-col justify-center items-center px-10 mx-10"
       >
         {' '}
-        <div>{page.name}</div>
         <PortableText value={page.content} />
       </div>
     </div>
