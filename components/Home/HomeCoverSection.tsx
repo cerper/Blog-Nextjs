@@ -8,7 +8,7 @@ const HomeCoverSection = async () => {
 
   return (
     <div className=" w-full inline-block">
-      <article className="flex flex-col items-start justify-end mx-6 sm:mx-10 relative h-[60vh] sm:h-[70vh] mb-4">
+      <article className=" w-[50vh] sm:w-full flex flex-col items-start justify-end mr-10 sm:mr-10 relative h-[60vh] sm:h-[70vh] mb-4">
         <div
           className="absolute top-0 left-0 right-0 bottom-0 h-full
        bg-gradient-to-b from-transparent from-0% to-dark rounded-3xl z-10"
@@ -19,12 +19,12 @@ const HomeCoverSection = async () => {
           fill
           className="w-full h-full object-cover object-center rounded-3xl z-0"
         />
-        <div className="w-full lg:w-4/5 p-8  sm:p-12 flex flex-col items-start justify-center z-10 text-light">
+        <div className="w-full lg:w-4/5 p-5  sm:p-10 flex flex-col items-start justify-center z-10 text-light">
           <span>
             {blog?.tags?.map((tag: any) => (
               <span
                 key={tag._id}
-                className="inline-block py-1 px-3 mr-2 sm:py-3 sm:inline-block sm:px-10 bg-dark/95 text-light rounded-full ml:2 sm:ml-4 mb-8 capitalize font-semibold border-2 border-solid border-light hover:scale-90 transition-all duration-200 "
+                className="inline-block py-0.5 px-3 mr-2 sm:py-2 sm:inline-block sm:px-10 bg-dark/95 text-light rounded-full ml:2 sm:ml-4 mb-4 capitalize font-semibold border-2 border-solid border-light hover:scale-90 transition-all duration-200 "
               >
                 {tag.name}
               </span>
