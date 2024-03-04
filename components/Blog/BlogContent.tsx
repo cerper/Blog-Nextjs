@@ -11,7 +11,7 @@ const BlogContent = async ({ params }: Props) => {
   return (
     <div
       className="col-span-6 font-in text-justify max-w-max mr-10 max-h-max prose prose-headings:my-5 prose-headings:text-2xl prose-p:mb-5 
-    prose-leading-7 prose-li:list-disc flex flex-col justify-center items-center  "
+    prose-leading-7 prose-li:list-disc flex flex-col justify-center items-center bg-light "
     >
       <PortableText
         value={blog.content}

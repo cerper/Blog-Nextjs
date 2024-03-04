@@ -13,7 +13,7 @@ const page = async ({ params }: Props) => {
     <div>
       <div
         className="font-in text-justify max-w-max mr-10 max-h-max prose prose-headings:my-5 prose-headings:text-2xl prose-p:mb-5 
-    prose-leading-7 prose-li:list-disc flex flex-col justify-center items-center px-10 mx-10"
+    prose-leading-7 prose-li:list-disc flex flex-col justify-center items-center px-10 mx-10 ml-4 sm:ml-3 bg-light"
       >
         {' '}
         <PortableText value={page.content} />
