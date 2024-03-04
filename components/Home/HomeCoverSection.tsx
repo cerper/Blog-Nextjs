@@ -8,7 +8,7 @@ const HomeCoverSection = async () => {
 
   return (
     <div className=" w-full inline-block">
-      <article className=" w-[50vh] sm:w-full flex flex-col items-start justify-end mr-10 sm:mr-10 relative h-[60vh] sm:h-[70vh] mb-4">
+      <article className=" w-full flex flex-col items-start justify-end mr-8 sm:mr-14 relative h-[60vh] sm:h-[70vh] mb-4">
         <div
           className="absolute top-0 left-0 right-0 bottom-0 h-full
        bg-gradient-to-b from-transparent from-0% to-dark rounded-3xl z-10"
