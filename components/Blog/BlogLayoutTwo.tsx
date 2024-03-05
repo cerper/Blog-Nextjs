@@ -17,7 +17,7 @@ const BlogLayoutTwo = async () => {
             src={blog.image}
             alt={blog.alt}
             width={400}
-            height={300}
+            height={400}
             className="aspect-square w-full h-full object-cover object-center  group-hover:scale-105 transition-all ease-in duration-200 "
           />
         </div>

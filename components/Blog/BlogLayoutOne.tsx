@@ -15,7 +15,7 @@ const BlogLayoutOne = async () => {
         <Image
           src={blog.image}
           alt={blog.alt}
-          width={400}
+          width={600}
           height={400}
           className="w-full h-full  object-cover object-center cursor-pointer rounded-3xl group-hover:scale-105 text-dark transition-all ease-in duration-200"
         />
@@ -32,7 +32,7 @@ const BlogLayoutOne = async () => {
           ))}
 
           <Link href={`blogs/${blog.slug}`} className="mt-2 sm:mt-4 ">
-            <h1 className="font-bold  capitalize text-light text-sm sm:text-2xl">
+            <h1 className="font-bold  capitalize text-light text-xs sm:text-2xl">
               <span
                 className="bg-gradient-to-r from-accent to-accent bg-[length:0px_6px]
               group-hover:bg-[length:100%_6px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500"
