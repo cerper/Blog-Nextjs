@@ -9,14 +9,14 @@ const BlogLayoutFour = async () => {
 
   return (
     <div
-      className="grid grid-cols-1 sm:grid-cols-3 grid-rows-1 
+      className="grid grid-cols-1 grid-rows-1 md:grid-cols-1 lg:grid-cols-3  md:grid-rows-1 
       mt-16 gap-10"
     >
       {blog.slice(4, 10).map((blog: Blog, index) => {
         return (
           <div
             key={index}
-            className="group flex  items-center justify-center  text-dark"
+            className="group grid grid-cols-1 grid-rows-1 sm:flex  items-center justify-center  text-dark"
           >
             <article className="col-span-1 row-span-1 relative">
               <Link
@@ -29,7 +29,7 @@ const BlogLayoutFour = async () => {
                     alt={blog.alt}
                     width={500}
                     height={400}
-                    className="aspect-[5/3] w-full rounded-2xl h-auto object-cover object-center group-hover:scale-105 transition-all ease-in duration-300 "
+                    className="aspect-[7/4] w-full rounded-2xl h-auto object-cover object-center group-hover:scale-105 transition-all ease-in duration-300 "
                   />
                 </div>
               </Link>
