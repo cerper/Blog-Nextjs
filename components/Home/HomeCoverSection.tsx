@@ -17,7 +17,7 @@ const HomeCoverSection = async () => {
           src={blog.image}
           alt={blog.alt}
           fill
-          className="w-full h-full object-cover object-center rounded-3xl z-0"
+          className="w-auto h-auto object-cover object-center rounded-3xl z-0"
         />
         <div className="w-full lg:w-4/5 p-5  sm:p-10 flex flex-col items-start justify-center z-10 text-light">
           <span>

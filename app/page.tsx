@@ -11,7 +11,7 @@ export default async function Home() {
   const data = await getData()
   const blog = data
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-light">
+    <main className="flex min-h-screen flex-col items-center justify-between p-10 sm:p-24 bg-light">
       <HomeCoverSection />
       <FeaturedPost />
       <RecentPost />

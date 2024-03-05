@@ -17,7 +17,7 @@ const BlogLayoutOne = async () => {
           alt={blog.alt}
           width={600}
           height={400}
-          className="w-full h-full  object-cover object-center cursor-pointer rounded-3xl group-hover:scale-105 text-dark transition-all ease-in duration-200"
+          className="w-auto h-auto  object-cover object-center cursor-pointer rounded-3xl group-hover:scale-105 text-dark transition-all ease-in duration-200"
         />
       </Link>
       <div className="w-full absolute bottom-0 p-5 sm:p-10 z-10">
