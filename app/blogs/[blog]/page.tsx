@@ -59,8 +59,8 @@ export default async function Blog({ params }: Props) {
       <div className="mx-10 ">
         <BlogDetails params={params} />
       </div>
-      <div className="grid grid-cols-6 gap-16 mt-8 text-justify px-10 mx-10 ">
-        <div className="col-span-6">
+      <div className="grid grid-cols-8 gap-16 mt-8 text-justify px-10 mx-10 ">
+        <div className="col-span-7">
           <BlogContent params={params} />
         </div>
       </div>

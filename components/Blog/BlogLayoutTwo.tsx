@@ -25,7 +25,7 @@ const BlogLayoutTwo = async () => {
 
       <div className="col-span-8 w-full mx-2">
         <Link href={`blogs/${blog.slug}`} className="inline-block my-1 ">
-          <h1 className="font-semibold capitalize text-lg">
+          <h1 className="font-semibold capitalize text-base sm:text-lg">
             <span
               className="bg-gradient-to-r from-accent/50 to-accent/50 bg-[length:0px_6px]
               group-hover:bg-[length:100%_6px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500"

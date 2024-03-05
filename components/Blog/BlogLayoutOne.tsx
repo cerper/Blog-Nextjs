@@ -25,7 +25,7 @@ const BlogLayoutOne = async () => {
           {blog?.tags?.map((tag: any) => (
             <span
               key={tag._id}
-              className="inline-block py-0.5 sm:py-3 px-4 sm:px-10 bg-dark/95 text-light rounded-full ml-4 mb-4 sm:mb-8 capitalize font-semibold border-2 border-solid border-light hover:scale-90 transition-all duration-200 "
+              className="inline-block text-sm sm:text-lg py-0.5 sm:py-3 px-4 sm:px-10 bg-dark/95 text-light rounded-full ml-4 mb-4 sm:mb-8 capitalize font-semibold border-2 border-solid border-light hover:scale-90 transition-all duration-200 "
             >
               {tag.name}
             </span>
