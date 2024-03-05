@@ -8,13 +8,13 @@ const RecentPost = async () => {
   console.log(data)
 
   return (
-    <section className="w-full mt-32 px-20 flex flex-col items-center justify-center">
+    <section className="w-full mt-32 px-10 sm:px-20 flex flex-col items-center justify-center">
       <div className="flex w-full justify-between">
         <h2 className=" inline-block font-bold capitalize text-4xl">
           Recent Post
         </h2>
       </div>
-      <div className="flex justify-center items-center">
+      <div className="grid grid-cols-1 sm:flex justify-center items-center">
         <BlogLayoutFour />
       </div>
     </section>

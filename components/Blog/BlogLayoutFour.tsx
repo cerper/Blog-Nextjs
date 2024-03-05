@@ -9,7 +9,7 @@ const BlogLayoutFour = async () => {
 
   return (
     <div
-      className="grid grid-cols-3 grid-rows-1 
+      className="grid grid-cols-1 sm:grid-cols-3 grid-rows-1 
       mt-16 gap-10"
     >
       {blog.slice(4, 10).map((blog: Blog, index) => {

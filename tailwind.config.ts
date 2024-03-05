@@ -19,6 +19,10 @@ const config: Config = {
         mr: ['var(--font-mr)'],
         in: ['var(--font-in)'],
       },
+      screens: {
+        sxl: '1180px',
+        xs: '480px',
+      },
     },
   },
   plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
