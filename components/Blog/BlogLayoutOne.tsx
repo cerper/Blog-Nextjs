@@ -20,19 +20,19 @@ const BlogLayoutOne = async () => {
           className="w-full h-full  object-cover object-center cursor-pointer rounded-3xl group-hover:scale-105 text-dark transition-all ease-in duration-200"
         />
       </Link>
-      <div className="w-full absolute bottom-0 p-10 z-10">
+      <div className="w-full absolute bottom-0 p-5 sm:p-10 z-10">
         <div>
           {blog?.tags?.map((tag: any) => (
             <span
               key={tag._id}
-              className="inline-block text-sm sm:text-lg py-0.5 sm:py-3 px-4 sm:px-10 bg-dark/95 text-light rounded-full ml-4 mb-2 sm:mb-8 capitalize font-semibold border-2 border-solid border-light hover:scale-90 transition-all duration-200 "
+              className="inline-block text-sm sm:text-lg py-0.5 sm:py-2 px-4 sm:px-10 bg-dark/95 text-light rounded-full ml-4 mb-1 sm:mb-4 capitalize font-semibold border-2 border-solid border-light hover:scale-90 transition-all duration-200 "
             >
               {tag.name}
             </span>
           ))}
 
-          <Link href={`blogs/${blog.slug}`} className="mt-2 sm:mt-6 ">
-            <h1 className="font-bold capitalize text-light text-sm sm:text-2xl">
+          <Link href={`blogs/${blog.slug}`} className="mt-2 sm:mt-4 ">
+            <h1 className="font-bold  capitalize text-light text-sm sm:text-2xl">
               <span
                 className="bg-gradient-to-r from-accent to-accent bg-[length:0px_6px]
               group-hover:bg-[length:100%_6px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500"
