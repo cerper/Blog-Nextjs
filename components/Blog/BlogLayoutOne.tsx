@@ -25,13 +25,13 @@ const BlogLayoutOne = async () => {
           {blog?.tags?.map((tag: any) => (
             <span
               key={tag._id}
-              className="inline-block text-sm sm:text-lg py-0.5 sm:py-3 px-4 sm:px-10 bg-dark/95 text-light rounded-full ml-4 mb-4 sm:mb-8 capitalize font-semibold border-2 border-solid border-light hover:scale-90 transition-all duration-200 "
+              className="inline-block text-sm sm:text-lg py-0.5 sm:py-3 px-4 sm:px-10 bg-dark/95 text-light rounded-full ml-4 mb-2 sm:mb-8 capitalize font-semibold border-2 border-solid border-light hover:scale-90 transition-all duration-200 "
             >
               {tag.name}
             </span>
           ))}
 
-          <Link href={`blogs/${blog.slug}`} className="mt-4 sm:mt-6 ">
+          <Link href={`blogs/${blog.slug}`} className="mt-2 sm:mt-6 ">
             <h1 className="font-bold capitalize text-light text-sm sm:text-2xl">
               <span
                 className="bg-gradient-to-r from-accent to-accent bg-[length:0px_6px]
