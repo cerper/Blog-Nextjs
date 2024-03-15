@@ -11,7 +11,7 @@ const FeaturedPost = async () => {
       <h2 className="w-full inline-block font-bold capitalize text-dark text-4xl">
         Featured Post
       </h2>
-      <div className="grid grid-cols-2 grid-rows-1 sm:grid-cols-2 lg:grid-rows-2  gap-6 mt-16">
+      <div className="grid grid-cols-2 grid-rows-1 sm:grid-cols-2 lg:grid-rows-1  gap-6 mt-16">
         <article className="col-span-2  sm:col-span-1 row-span-1 lg:row-span-2 relative">
           <BlogLayoutOne />
         </article>

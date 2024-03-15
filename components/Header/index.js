@@ -1,4 +1,3 @@
-'use client'
 import Link from 'next/link'
 import { GithubIcon, LinkedinIcon, SunIcon, TiktokIcon } from '../icon'
 import Logo from './Logo'
